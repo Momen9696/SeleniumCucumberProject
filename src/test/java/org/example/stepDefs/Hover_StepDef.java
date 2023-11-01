@@ -13,13 +13,13 @@ import java.util.Locale;
 
 public class Hover_StepDef {
     Hover_Locators Hover = new Hover_Locators();
+    Actions HoverAction;
 
     @When(": user Hovered on Computers main category tab")
     public void user_hovered_on_computers_main_category_tab() throws InterruptedException {
 
-        Actions HoverAction = new Actions(Hooks.driver);
+         HoverAction = new Actions(Hooks.driver);
         HoverAction.moveToElement(Hover.MainCategory()).perform();
-        Thread.sleep(1000);
 
     }
 

@@ -10,7 +10,7 @@ Feature: Search Feature
       | Gift Cards |
       | Jewelry    |
 
-  Scenario Outline: user wants to by a new item
+  Scenario Outline: user wants to by a new item with items code instead of name
     When  User enter name of "<products>" and click search
     Then  Searched products shall be appeared
     Examples:

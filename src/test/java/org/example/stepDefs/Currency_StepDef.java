@@ -8,17 +8,11 @@ import org.testng.Assert;
 
 public class Currency_StepDef {
     Currency_Locators currency = new Currency_Locators();
-
+    Select CurrencySelect;
     @When("user Select Euro currency from the dropdown list on the top left of home page")
     public void userSelectEuroCurrencyFromTheDropdownListOnTheTopLeftOfHomePage() {
-        Select CurrencySelect = new Select(currency.GetCurrency());
+         CurrencySelect = new Select(currency.setCurrencyEuro());
         CurrencySelect.selectByVisibleText("Euro");
-    }
-
-
-    @Then("EURO shall be default currency")
-    public void euroShallBeDefaultCurrency() {
-
     }
 
     @Then("EURO shall be default currency for main products")

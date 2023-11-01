@@ -7,7 +7,7 @@ import org.openqa.selenium.WebElement;
 import java.util.List;
 
 public class Currency_Locators {
-    public WebElement GetCurrency() {
+    public WebElement setCurrencyEuro() {
         return Hooks.driver.findElement(By.id("customerCurrency"));
     }
 

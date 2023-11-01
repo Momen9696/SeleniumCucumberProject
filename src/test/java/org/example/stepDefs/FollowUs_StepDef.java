@@ -12,10 +12,10 @@ import static org.example.stepDefs.Hooks.driver;
 public class FollowUs_StepDef {
     FollowUs_Locators Follow = new FollowUs_Locators();
 
+
     @When(": user click on facebook tab")
     public void user_click_on_facebook_tab() throws InterruptedException {
         Follow.FaceBookFollowUp().click();
-        Thread.sleep(2000);
     }
 
     @Then(": user a second tap shall be opened on Nopcommerce facebook page")
@@ -31,7 +31,6 @@ public class FollowUs_StepDef {
     @When(": user click on twitter tab")
     public void user_click_on_twitter_tab() throws InterruptedException {
         Follow.TwitterFollowUs().click();
-        Thread.sleep(3000);
     }
 
     @Then(": user a second tap shall be opened on Nopcommerce twitter page")
@@ -47,9 +46,6 @@ public class FollowUs_StepDef {
     @When(": user click on rss tab")
     public void user_click_on_rss_tab() throws InterruptedException {
         Follow.RssFollowUs().click();
-        Thread.sleep(3000);
-
-
     }
 
     @Then(": user shall be redirected to demo.nopcommerce.com")
@@ -62,7 +58,6 @@ public class FollowUs_StepDef {
     @When(": user click on youtube tab")
     public void user_click_on_youtube_tab() throws InterruptedException {
         Follow.YoutubeFollowUs().click();
-        Thread.sleep(3000);
 
     }
 

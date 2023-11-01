@@ -12,8 +12,8 @@ public class Search_StepDef {
     Search_Locators Search = new Search_Locators();
 
     @When("User enter name of {string} and click search")
-    public void userEnterNameOfAndClickSearch(String arg0) {
-        Search.SearchingBar().sendKeys(arg0);
+    public void userEnterNameOfAndClickSearch(String Product) {
+        Search.SearchingBar().sendKeys(Product);
         Search.SearchingIcon().click();
     }
 
