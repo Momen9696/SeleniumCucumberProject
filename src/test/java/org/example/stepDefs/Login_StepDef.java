@@ -11,6 +11,7 @@ import static org.example.stepDefs.Hooks.driver;
 
 public class Login_StepDef {
     Login_Locators Login = new Login_Locators();
+    SoftAssert softAssert = new SoftAssert();
 
     @Given("user go to login page")
     public void userGoToLoginPage() {
@@ -30,17 +31,15 @@ public class Login_StepDef {
 
     @Then("user login to the system successfully")
     public void userLoginToTheSystemSuccessfully() {
-        SoftAssert LoginAssert = new SoftAssert();
         String actualUrl = driver.getCurrentUrl();
         String expectedUrl = "https://demo.nopcommerce.com/";
-        LoginAssert.assertEquals(actualUrl, expectedUrl);
-        LoginAssert.assertAll();
+        softAssert.assertEquals(actualUrl, expectedUrl);
+        softAssert.assertAll();
     }
 
     @Given("user go to login page to login with invalid email")
     public void userGoToLoginPageToLoginWithInvalidEmail() {
         Login.LoginIcon().click();
-
     }
 
 
@@ -52,9 +51,8 @@ public class Login_StepDef {
 
     @Then("user could not login to the system")
     public void userCouldNotLoginToTheSystem() {
-        SoftAssert InvalidLogin = new SoftAssert();
-        InvalidLogin.assertTrue(Login.WarrningMessage().getText().contains("Login was unsuccessful"));
-        InvalidLogin.assertAll();
+        softAssert.assertTrue(Login.WarrningMessage().getText().contains("Login was unsuccessful"));
+        softAssert.assertAll();
     }
 
 

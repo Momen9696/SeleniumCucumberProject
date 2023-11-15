@@ -1,6 +1,5 @@
 package org.example.stepDefs;
 
-import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.example.pages.Search_Locators;
